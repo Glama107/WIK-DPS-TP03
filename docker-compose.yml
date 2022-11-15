@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./single-stage.dockerfile
+    image: basic
+    deploy:
+      replicas: 4
+    expose:
+      - 8080
+
